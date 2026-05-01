@@ -47,7 +47,7 @@ def agent_loop(args, client, messages):
         raise RuntimeError("Fail to communicate with Gemini API")
 
     if response.candidates != None:
-        for response_candidate in presponse.candidates:
+        for response_candidate in response.candidates:
             messages.append(response_candidate.content)
 
     if (args.verbose):
