@@ -40,7 +40,7 @@ def main():
         print(f"Response tokens: {response.usage_metadata.candidates_token_count}")
     print(response.text)
     if response.function_calls != None:
-        for function_call in function_calls:
+        for function_call in response.function_calls:
             print(f"Calling function: {function_call.name}({function_call.args})")
 
 

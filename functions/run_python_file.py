@@ -15,6 +15,7 @@ schema_run_python_file = types.FunctionDeclaration(
             "args": types.Schema(
                 type=types.Type.ARRAY,
                 description="The arguments to pass to the Python script (default is None)",
+                items=types.Schema(type=types.Type.STRING),
             ),
         },
     ),
